@@ -5,7 +5,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Made with :heart: 
 
-[![Join the chat at https://gitter.im/Angular-5-Example-Shopping-App/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Angular-5-Example-Shopping-App/Lobby)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![TypeScript](https://badges.frapsoft.com/typescript/love/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
@@ -13,6 +12,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+ Go to project folder and install dependencies.
+ ```bash
+ npm install
+ ```
+ 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
