@@ -1,0 +1,78 @@
+
+
+body{
+  padding-top:20px;
+  font-family:Roboto, sans-serif;
+  text-align:center;
+  background:#fff;
+  color:#222;
+  padding-bottom:40px;
+  background: url(https://djave.co.uk/hosted/subtlepatterns/lightpaperfibers.png);
+}
+
+#focus{
+  background:rgba(255,0,0,0.7);
+  padding:20px;
+  font-weight:bold;
+  font-size:30px;
+  color:#fff;
+}
+
+.mono{
+  font-family:"Cutive Mono", monospace;
+}
+
+.wrong{
+  background:red;
+  color:#fff;
+}
+
+hr{
+  margin:1em 0;
+  max-width:800px;
+  border:none;
+  border-top:1px solid rgba(255,255,255,0.3);
+  margin:0 auto;
+}
+
+.results{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+}
+
+
+
+
+.button{
+  display:inline-block;
+  padding:8px 10px;
+  background:#057f24;
+  border-radius:2px;
+  color:#fff;
+}
+
+#textarea{
+  position:absolute;
+}
+
+
+
+textarea{
+  width:100%;
+  margin:1em auto;
+  display: none;
+  position:relative;
+  white-space:pre;
+  box-shadow:inset 0 0 10px 0 rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+
+.results{
+  font-family:Roboto;
+}
+
+
+
