@@ -125,9 +125,9 @@ export class DashboardComponent implements OnInit {
     $("#input_text").change(function () {
       _reset();
     });
-    
+
     //Start the timer
-    var _start = function(){
+    var _start = function () {
       interval_timer = setInterval(function () {
         timer++;
         $("#timer").text(timer);
@@ -136,14 +136,14 @@ export class DashboardComponent implements OnInit {
       }, 1000)
     }
 
-   //Stop timer
-    var _stop = function(){
+    //Stop timer
+    var _stop = function () {
       clearInterval(interval_timer);
       started = false;
     }
-   
+
     //Reset the stats
-    var _reset =function(){
+    var _reset = function () {
       $("#input_text").blur().hide();;
       $("#your-attempt").text("");
       index = 0;
@@ -159,9 +159,9 @@ export class DashboardComponent implements OnInit {
       current_string = letters.substring(index, index + character_length);
       $("#target").text(current_string);
     }
-   
-   //Show the message on finished.
-    var _finished = function(){
+
+    //Show the message on finished.
+    var _finished = function () {
       alert("Congratulations!\nWords per minute: " + wpm + "\nWordcount: " + wordcount + "\nErrors:" + errors);
     }
 
