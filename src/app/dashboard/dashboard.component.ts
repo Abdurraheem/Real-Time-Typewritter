@@ -75,7 +75,7 @@ export class DashboardComponent implements OnInit {
     $("#target").text(current_string);
     $(window).keypress(function (evt) {
       if (!started) {
-        start();
+        _start();
         started = true;
       }
       evt = evt || window.event;
@@ -99,8 +99,8 @@ export class DashboardComponent implements OnInit {
           }
           wpm = Math.round(wordcount / (timer / 60));
           $("#wpm").text(wpm);
-          stop();
-          finished();
+          _stop();
+          _finished();
         }
       } else {
         $("#your-attempt").append("<span class='wrong'>" + charTyped + "</span>");
@@ -111,7 +111,7 @@ export class DashboardComponent implements OnInit {
     });
 
     $("#reset").click(function () {
-      reset();
+      _reset();
     });
 
     $("#change").click(function () {
@@ -119,14 +119,15 @@ export class DashboardComponent implements OnInit {
     });
 
     $("#pause").click(function () {
-      stop();
+      _stop();
     });
 
     $("#input_text").change(function () {
-      reset();
+      _reset();
     });
-
-    function start() {
+    
+    //Start the timer
+    var _start = function(){
       interval_timer = setInterval(function () {
         timer++;
         $("#timer").text(timer);
@@ -135,12 +136,14 @@ export class DashboardComponent implements OnInit {
       }, 1000)
     }
 
-    function stop() {
+   //Stop timer
+    var _stop = function(){
       clearInterval(interval_timer);
       started = false;
     }
-
-    function reset() {
+   
+    //Reset the stats
+    var _reset =function(){
       $("#input_text").blur().hide();;
       $("#your-attempt").text("");
       index = 0;
@@ -156,8 +159,9 @@ export class DashboardComponent implements OnInit {
       current_string = letters.substring(index, index + character_length);
       $("#target").text(current_string);
     }
-
-    function finished() {
+   
+   //Show the message on finished.
+    var _finished = function(){
       alert("Congratulations!\nWords per minute: " + wpm + "\nWordcount: " + wordcount + "\nErrors:" + errors);
     }
 
